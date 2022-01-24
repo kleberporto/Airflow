@@ -36,7 +36,7 @@ class ElasticHook(BaseHook):
             doc ([type]): the document data
         """
         self.set_index(index)
-        res = self.es.index(index=index, doc_type=doc_type, doc=doc)
+        res = self.es.index(index=index, doc_type=doc_type, body=doc)
         return res
 
 
